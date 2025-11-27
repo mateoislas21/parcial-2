@@ -32,3 +32,4 @@ LIBS += -LC:\Qt_archi_grafics
 LIBS += -lqcustomplotd2
 LIBS += -lmuParserDLL
 INCLUDEPATH += C:\Qt_archi_grafics
+

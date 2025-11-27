@@ -15,26 +15,25 @@ class de_info_aprobada : public QMainWindow
 public:
     de_info_aprobada(QWidget *parent = nullptr);
     ~de_info_aprobada();
-    double interrpolacion_en_y (int pizq,int pder);
-    double f(double x, int n);
-    double derivada_point(int punto, int n);
-    double integrar(int  n , double lim_inf, double lim_sup);
-    void revalue(int n);
-    void revalue_arch(int n);
+    double integrar( double lim_inf, double lim_sup);
+    void revalue_arch();
     void rang_x(double x_min,double x_max);
     QColor color();
-    void plot(int n);
-    void max_min();
-    double interrpolacion_en_y(double x_der, double x_izq, double y_der,double y_izq);
+    void plot();
+    double interrpolacion_en_y(double x_der, double x_izq, double y_der,double y_izq,double x_eval);
 public slots:
-
-private:
+    void plotear ();
+    void consumo();
+    void evaluar();
+    private:
     Ui::de_info_aprobada *ui;
     QVector <double>x;
     QVector <double>y;
-    QVector <double> t;
+    QVector <double>t;
+    QVector <double>bat;
     QVector <QString> Funciones;
     int Cant_x , N_funcions;
     double xmin,xmax,xd;
+    double y_rms,x_rms;
 };
 #endif // DE_INFO_APROBADA_H
